@@ -39,4 +39,10 @@ public class UserController {
         Long userId = Long.parseLong(authentication.getName());
         return ResponseEntity.ok(ApiResponse.ok(userService.getProfile(userId)));
     }
+
+    @GetMapping("/profile/{userId}")
+    public ResponseEntity<ApiResponse<UserProfileDto>> getProfileById(@PathVariable Long userId) {
+        return ResponseEntity.ok(ApiResponse.ok(userService.getProfile(userId)));
+    }
+
 }
