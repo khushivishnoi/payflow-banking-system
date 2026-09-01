@@ -12,7 +12,7 @@ services:
     command: --init-file /docker-entrypoint-initdb.d/init.sql
 
   mongodb:
-    image: mongo:6
+    image: mongo:4.4
     ports:
       - "27017:27017"
     volumes:
